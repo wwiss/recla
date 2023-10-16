@@ -29,16 +29,16 @@ public void create(Reclamation entity) {
     int generatedId = -1;
 
     try {
-        pst = cnx.prepareStatement("INSERT INTO reclamation (numero_mobile, date_traitement, description, objet, status, nom, prenom, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+        pst = cnx.prepareStatement("INSERT INTO reclamation (numero_mobile, description, objet,  nom, prenom, email) VALUES (?, ?,  ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
 
         pst.setInt(1, entity.getNumero_mobile());
-        pst.setDate(2, entity.getDate_traitement());
-        pst.setString(3, entity.getDescription());
-        pst.setString(4, entity.getObjet());
-        pst.setString(5, entity.getStatus());
-        pst.setString(6, entity.getNom());
-        pst.setString(7, entity.getPrenom());
-        pst.setString(8, entity.getEmail());
+      
+        pst.setString(2, entity.getDescription());
+        pst.setString(3, entity.getObjet());
+      
+        pst.setString(4, entity.getNom());
+        pst.setString(5, entity.getPrenom());
+        pst.setString(6, entity.getEmail());
 
         int n = pst.executeUpdate();
         if (n > 0) {
@@ -74,19 +74,19 @@ public void create(Reclamation entity) {
         int n = 0;
 
         try {
-           pst = cnx.prepareStatement("INSERT INTO reclamation ( numero_mobile,  date_traitement , description,  objet,  status,  nom,  prenom,  email) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+           pst = cnx.prepareStatement("INSERT INTO reclamation ( numero_mobile,  , description,  objet,    nom,  prenom,  email) VALUES (?, ?,  ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
 
             //pst.setInt(1, entity.getId());
             pst.setInt(2, entity.getNumero_mobile());
-             pst.setDate(3, entity.getDate_traitement());
+           
              
-            pst.setString(4, entity.getDescription());
-            pst.setString(5, entity.getObjet());
-             pst.setString(6, entity.getStatus());
+            pst.setString(3, entity.getDescription());
+            pst.setString(4, entity.getObjet());
           
-            pst.setString(7, entity.getNom());
-            pst.setString(8, entity.getPrenom());
-             pst.setString(9, entity.getEmail());
+          
+            pst.setString(5, entity.getNom());
+            pst.setString(6, entity.getPrenom());
+             pst.setString(6, entity.getEmail());
 
 
             n = pst.executeUpdate();
@@ -137,10 +137,10 @@ public void create(Reclamation entity) {
 
                reclamation.setId(rs.getInt("id"));
                 reclamation.setNumero_mobile(rs.getInt("numero_mobile"));
-                reclamation.setDate_traitement(rs.getDate("date_traitement"));
+              
                 reclamation.setDescription(rs.getString("description"));
                 reclamation.setObjet(rs.getString("objet"));
-               reclamation.setStatus(rs.getString("status"));
+              
                 reclamation.setNom(rs.getString("nom"));
                 reclamation.setPrenom(rs.getString("prenom"));
                 reclamation.setEmail(rs.getString("email"));
@@ -167,10 +167,10 @@ public List<Reclamation> getAll() {
             Reclamation reclamation = new Reclamation();
             reclamation.setId(rs.getInt("id")); // Include the ID field
             reclamation.setNumero_mobile(rs.getInt("numero_mobile"));
-            reclamation.setDate_traitement(rs.getDate("date_traitement"));
+            
             reclamation.setDescription(rs.getString("description"));
             reclamation.setObjet(rs.getString("objet"));
-            reclamation.setStatus(rs.getString("status"));
+        
             reclamation.setNom(rs.getString("nom"));
             reclamation.setPrenom(rs.getString("prenom"));
             reclamation.setEmail(rs.getString("email"));

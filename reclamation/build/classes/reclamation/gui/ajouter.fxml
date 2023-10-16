@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="766.0" prefWidth="1088.0" style="-fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="reclamation.gui.AjouterController">
+   <children>
+      <Label layoutX="593.0" layoutY="76.0" prefHeight="17.0" prefWidth="150.0" text="Prénom" textFill="#2e2d2f">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="77.0" prefHeight="30.0" prefWidth="76.0" text="Nom" AnchorPane.leftAnchor="69.0" AnchorPane.rightAnchor="943.0" AnchorPane.topAnchor="77.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="176.0" text="MOBILE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+           <Button layoutX="869.0" layoutY="652.0" mnemonicParsing="false" onAction="#envoyerButton" prefHeight="71.0" prefWidth="187.0" style="-fx-background-color: green;" text="envoyer" />
+           <TextField layoutX="185.0" layoutY="77.0" promptText="nom" />
+      <TextField layoutX="708.0" layoutY="77.0" promptText="prenom" />
+      <Label layoutX="619.0" layoutY="173.0" text="Email" textFill="#3c3c3c">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="193.0" layoutY="347.0" text="description" textFill="#393636">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField layoutX="185.0" layoutY="174.0" promptText="+216" />
+      <TextField layoutX="720.0" layoutY="174.0" promptText="email" />
+      <TextArea layoutX="101.0" layoutY="409.0" prefHeight="209.0" prefWidth="341.0" promptText="Description" />
+      <SplitMenuButton layoutX="169.0" layoutY="258.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="187.0" text="inscription&#10;&#10;" textFill="#363232">
+        <items>
+          <MenuItem mnemonicParsing="false" text="cours" />
+          <MenuItem mnemonicParsing="false" text="autre" />
+        </items>
+      </SplitMenuButton>
+      <Label layoutX="48.0" layoutY="259.0" text="Objet">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="196.0" fitWidth="256.0" layoutX="727.0" layoutY="347.0" opacity="0.63" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Desktop/p.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="35.0" layoutX="31.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Desktop/phone.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="555.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Desktop/personne.2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="55.0" layoutX="568.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true" style="-fx-blend-mode: SRC_OVER;">
+         <image>
+            <Image url="@../../../../../../Desktop/mail.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="25.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Desktop/per.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

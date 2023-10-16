@@ -13,7 +13,7 @@ import java.sql.*;
  */
     
 public class Myconnection {
-    private String url = "jdbc:mysql://localhost:3306/reclamation";
+    private String url = "jdbc:mysql://localhost:3306/coursifydb";
     private String login = "root";
     private String password ="";
 

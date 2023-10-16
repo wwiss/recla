@@ -31,27 +31,29 @@ public class Main {
 
             // Set the Reclamation object's properties
             // Note: You may want to remove the manual setting of the ID to allow the database to generate it.
-            reclamation.setNumero_mobile(2222222);
-            reclamation.setDate_traitement(currentDate);
+          reclamation.setNumero_mobile(2222222);
+            
             reclamation.setDescription("ddddd");
             reclamation.setObjet("ddddd");
-            reclamation.setStatus("fffff");
+          
             reclamation.setNom("yyyyy");
             reclamation.setPrenom("Med xx");
             reclamation.setEmail("mxxxi@esprit.tn");
 
             // Create a ReclamationService instance and use it to insert the record
             ReclamationService rr = new ReclamationService();
-           // rr.create(reclamation);
+            rr.create(reclamation);
+        
+        
            // rr.delete(2);
            // System.out.println(rr.getById(3).toString());
        
-       List<Reclamation> reclamationList = new ArrayList<>();
-         reclamationList =rr.getAll();
+      // List<Reclamation> reclamationList = new ArrayList<Reclamation>();
+        // reclamationList =rr.getAll();
 
-        for (Reclamation recalmation : reclamationList) {
-            System.out.println(reclamation);
-        }
+        //for (Reclamation rec : reclamationList) {
+            //System.out.println(rec);
+      //  }
             // Print the Reclamation object
            // System.out.println(reclamation);
 
@@ -63,3 +65,5 @@ public class Main {
         }
     }
 }
+    
+

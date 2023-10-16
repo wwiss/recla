@@ -14,31 +14,32 @@ import java.sql.Time;
  * @author ZARAMI
  */
 public class Reclamation {
-     int id,numero_mobile;
+     int id;
+     int numero_mobile;
     Date date_traitement;
     String description,objet,status,nom,prenom,email;
 
     public Reclamation() {
     }
 
-    public Reclamation(int numero_mobile, Date date_traitement, String description, String objet, String status, String nom, String prenom, String email) {
+    public Reclamation(int numero_mobile,  String description, String objet, String nom, String prenom, String email) {
         this.numero_mobile = numero_mobile;
-        this.date_traitement = date_traitement;
+    
         this.description = description;
         this.objet = objet;
-        this.status = status;
+   
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
     }
     
-    public Reclamation(int id, int numero_mobile, Date date_traitement, String description, String objet, String status, String nom, String prenom, String email) {
+    public Reclamation(int id, int numero_mobile,  String description, String objet,  String nom, String prenom, String email) {
         this.id = id;
         this.numero_mobile = numero_mobile;
-        this.date_traitement = date_traitement;
+       
         this.description = description;
         this.objet = objet;
-        this.status = status;
+     
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
@@ -52,9 +53,7 @@ public class Reclamation {
         return numero_mobile;
     }
 
-    public Date getDate_traitement() {
-        return date_traitement;
-    }
+  
 
     public String getDescription() {
         return description;
@@ -64,9 +63,7 @@ public class Reclamation {
         return objet;
     }
 
-    public String getStatus() {
-        return status;
-    }
+   
 
     public String getNom() {
         return nom;
@@ -88,9 +85,7 @@ public class Reclamation {
         this.numero_mobile = numero_mobile;
     }
 
-    public void setDate_traitement(Date date_traitement) {
-        this.date_traitement = date_traitement;
-    }
+   
 
     public void setDescription(String description) {
         this.description = description;
@@ -100,9 +95,6 @@ public class Reclamation {
         this.objet = objet;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
 
     public void setNom(String nom) {
         this.nom = nom;
@@ -118,7 +110,7 @@ public class Reclamation {
 
     @Override
     public String toString() {
-        return "reclamation{" + "id=" + id + ", numero_mobile=" + numero_mobile + ", date_traitement=" + date_traitement + ", description=" + description + ", objet=" + objet + ", status=" + status + ", nom=" + nom + ", prenom=" + prenom + ", email=" + email + '}';
+        return "reclamation{" + "id=" + id + ", numero_mobile=" + numero_mobile + ", description=" + description + ", objet=" + objet + ",  nom=" + nom + ", prenom=" + prenom + ", email=" + email + '}';
     }
     
 }
