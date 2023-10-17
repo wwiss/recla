@@ -15,14 +15,14 @@ import java.sql.Time;
  */
 public class Reclamation {
      int id;
-     int numero_mobile;
+     String numero_mobile;
     Date date_traitement;
     String description,objet,status,nom,prenom,email;
 
     public Reclamation() {
     }
 
-    public Reclamation(int numero_mobile,  String description, String objet, String nom, String prenom, String email) {
+    public Reclamation(String numero_mobile,  String description, String objet, String nom, String prenom, String email) {
         this.numero_mobile = numero_mobile;
     
         this.description = description;
@@ -33,7 +33,7 @@ public class Reclamation {
         this.email = email;
     }
     
-    public Reclamation(int id, int numero_mobile,  String description, String objet,  String nom, String prenom, String email) {
+    public Reclamation(int id, String numero_mobile,  String description, String objet,  String nom, String prenom, String email) {
         this.id = id;
         this.numero_mobile = numero_mobile;
        
@@ -49,7 +49,7 @@ public class Reclamation {
         return id;
     }
 
-    public int getNumero_mobile() {
+    public String getNumero_mobile() {
         return numero_mobile;
     }
 
@@ -81,7 +81,7 @@ public class Reclamation {
         this.id = id;
     }
 
-    public void setNumero_mobile(int numero_mobile) {
+    public void setNumero_mobile(String numero_mobile) {
         this.numero_mobile = numero_mobile;
     }
 

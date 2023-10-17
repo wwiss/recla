@@ -31,7 +31,7 @@ public class Main {
 
             // Set the Reclamation object's properties
             // Note: You may want to remove the manual setting of the ID to allow the database to generate it.
-          reclamation.setNumero_mobile(2222222);
+          reclamation.setNumero_mobile("2222222");
             
             reclamation.setDescription("ddddd");
             reclamation.setObjet("ddddd");
